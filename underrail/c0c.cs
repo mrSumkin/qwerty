@@ -1,0 +1,91 @@
+﻿using System;
+using TimelapseVertigo.Playfield.Locale;
+
+// Token: 0x02000EA9 RID: 3753
+[e79("Jy_DoctorHealsWounds")]
+public sealed class c0c : dgy
+{
+	// Token: 0x06004D98 RID: 19864 RVA: 0x0022644C File Offset: 0x0022464C
+	public c0c()
+	{
+		cnk serviceOrThrow = bpo.GetServiceOrThrow<cnk>();
+		if (serviceOrThrow != null && serviceOrThrow.aqu() != null)
+		{
+			c5x c5x = serviceOrThrow.aqu().v().b() as c5x;
+			if (c5x != null)
+			{
+				c5x c5x2 = new ar7(new Guid("45f4075b-bbca-4554-b356-3d3be821490e"), c5x.Area).ao() as c5x;
+				if (c5x2 != null)
+				{
+					base.a(new btm[]
+					{
+						new ace(new e80(false))
+					});
+					btm[] array = new btm[1];
+					int num = 0;
+					bb8 bb = new bb8();
+					bb.a(CharacterState.Attack1);
+					bb.a(atp.a);
+					bb.IsAsync = false;
+					bb.a(new ar7(c5x2));
+					bb.b(1);
+					array[num] = bb;
+					base.a(array);
+					base.a(new btm[]
+					{
+						new os(TimeSpan.FromSeconds(0.5))
+					});
+					btm[] array2 = new btm[1];
+					int num2 = 0;
+					bb8 bb2 = new bb8();
+					bb2.a(CharacterState.Operating);
+					bb2.a(atp.a);
+					bb2.IsAsync = true;
+					bb2.a(new ar7(c5x2));
+					bb2.b(3);
+					array2[num2] = bb2;
+					base.a(array2);
+					base.a(new btm[]
+					{
+						new os(TimeSpan.FromSeconds(1.0))
+					});
+					btm[] array3 = new btm[1];
+					int num3 = 0;
+					dky dky = new dky();
+					dky.a(0.2f);
+					dky.a(false);
+					array3[num3] = dky;
+					base.a(array3);
+					base.a(new btm[]
+					{
+						new ace(new eop())
+					});
+					base.a(new btm[]
+					{
+						new os(TimeSpan.FromSeconds(2.0))
+					});
+					btm[] array4 = new btm[1];
+					int num4 = 0;
+					c8s c8s = new c8s();
+					c8s.a(0.2f);
+					c8s.IsAsync = false;
+					array4[num4] = c8s;
+					base.a(array4);
+					btm[] array5 = new btm[1];
+					int num5 = 0;
+					egx egx = new egx();
+					egx.a("Обезболивающее не нужно. Видишь ли, в итоге все всё равно вырубаются. ::Маниакально смеётся.::");
+					array5[num5] = new ace(egx)
+					{
+						TargetRef = new ar7(c5x2)
+					};
+					base.a(array5);
+					base.a(new btm[]
+					{
+						new ace(new e80(true))
+					});
+				}
+			}
+		}
+	}
+}
